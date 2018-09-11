@@ -14,7 +14,6 @@ import { PlaneListModule } from './plane-list/plane-list.module';
     AppComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     MemberListModule,
     MemberViewModule,
