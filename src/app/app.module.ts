@@ -22,9 +22,10 @@ import { PlaneListModule } from './plane-list/plane-list.module';
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'ger' }
   ],
-  bootstrap: [AppComponent],
   entryComponents: [
     EditMemberDialogComponent
   ]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule { 
+ }
