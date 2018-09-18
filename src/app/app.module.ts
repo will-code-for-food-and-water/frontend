@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatStepperModule, MatCardModule, MatTooltipModule, MatDatepickerModule, MatNativeDateModule, MatDialogModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule, PatternValidator } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AddUserFormComponent } from './add-user-form/add-user-form.component';
@@ -36,12 +36,13 @@ import { MemberViewModule } from './member-view/member-view.module';
     MatTooltipModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   entryComponents: [
     AddUserFormComponent
   ],
-  providers: [],
+  providers: [ { provide: LOCALE_ID, useValue: 'ger' } ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+ }
