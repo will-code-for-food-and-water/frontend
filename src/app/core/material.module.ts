@@ -8,4 +8,4 @@ import {FormsModule} from '@angular/forms';
     imports: [CommonModule, MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, FormsModule],
     exports: [CommonModule, MatToolbarModule, MatButtonModule, MatCardModule, MatInputModule, FormsModule],
 })
-export class CustomMaterialModule { }
+export class MaterialModule { }

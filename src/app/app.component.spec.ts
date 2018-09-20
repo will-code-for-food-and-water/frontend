@@ -7,6 +7,7 @@ import { MemberListModule } from './member-list/member-list.module';
 import { MemberViewModule } from './member-view/member-view.module';
 
 describe('AppComponent', () => {
+  beforeEach(() => { TestBed.configureTestingModule({ declarations: [ AppComponent ], imports: [ RouterTestingModule ] });
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
