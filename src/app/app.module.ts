@@ -14,6 +14,8 @@ import { PlaneListModule } from './plane-list/plane-list.module';
     AppComponent,
   ],
   imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MemberListModule,
     MemberViewModule,
@@ -27,5 +29,5 @@ import { PlaneListModule } from './plane-list/plane-list.module';
   ]
   bootstrap: [AppComponent],
 })
-export class AppModule { 
- }
+export class AppModule {
+}
