@@ -10,6 +10,7 @@ import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MemberListModule } from './member-list/member-list.module';
 import { MemberViewModule } from './member-view/member-view.module';
+import { MAT_DATE_LOCALE } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { MemberViewModule } from './member-view/member-view.module';
   entryComponents: [
     AddUserFormComponent
   ],
-  providers: [{ provide: localeDe, useValue: 'de' }],
+  providers: [
+    { provide: localeDe, useValue: 'de' },
+    { provide: MAT_DATE_LOCALE, useValue: 'ger' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
