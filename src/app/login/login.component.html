@@ -1,31 +1,19 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span><i class="material-icons">supervised_user_circle</i></span>
-    <span class="example-fill-remaining-space"></span>
-    <span class="align-center"></span>
-    <span class="example-spacer"></span>
-
-    <button mat-button>Startseite</button>
-    <button mat-button>Login</button>
-  </mat-toolbar-row>
-</mat-toolbar>
-<div id='login'>
-<mat-card class="example-card">
+<mat-card class="card">
   <mat-card-header>
-    <mat-card-title><h1>Login</h1></mat-card-title>
+    <mat-card-title id="login"><h1>Login</h1></mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="example-form">
-      <table class="example-full-width" cellspacing="0">
+    <form class="form">
+      <table class="full-width" cellspacing="0">
         <tr>
           <td>
-            <mat-form-field class="example-full-width">
-            <input matInput placeholder="Benutzername" [(ngModel)]="username" name="username" required>
+            <mat-form-field class="full-width">
+            <input matInput placeholder="Mitgliedsnummer" [(ngModel)]="username" name="username" required>
             </mat-form-field>
           </td>
         </tr>
         <tr>
-        <td><mat-form-field class="example-full-width">
+        <td><mat-form-field class="full-width">
           <input matInput placeholder="Passwort" [(ngModel)]="password"type="password" name="password" required>
         </mat-form-field></td>
       </tr></table>
@@ -36,4 +24,4 @@
     <button mat-raised-button (click)="login()" color="primary">Login</button>
   </mat-card-actions>
 </mat-card>
-</div>
+
