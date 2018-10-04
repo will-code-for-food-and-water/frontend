@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MemberListModule } from './member-list/member-list.module';
 import { MemberViewModule } from './member-view/member-view.module';
 import { MAT_DATE_LOCALE } from '@angular/material';
+import { AddPlaneFormComponent } from './add-plane-form/add-plane-form.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { MAT_DATE_LOCALE } from '@angular/material';
     MemberViewModule
   ],
   entryComponents: [
-    AddUserFormComponent
+    AddUserFormComponent,
+    AddPlaneFormComponent
   ],
   providers: [
     { provide: localeDe, useValue: 'de' },
