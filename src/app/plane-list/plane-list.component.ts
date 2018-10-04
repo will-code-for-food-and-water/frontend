@@ -12,7 +12,7 @@ export class PlaneListComponent implements OnInit {
 
   planes: Plane[];
 
-  constructor(public planelistService: PlaneListService) {
+  constructor(public planelistService: PlaneListService, public addPlaneDialog: MatDialog) {
     this.planes = [];
   }
 
@@ -25,6 +25,15 @@ export class PlaneListComponent implements OnInit {
         }
       }
     );
-  }
+    }
 
-}
+    openAddPlaneDialog(): void {
+      const dialogRef = this.addPlaneDialog.open(AddPlaneFormComponent, {
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+      });
+    }
+
+  }

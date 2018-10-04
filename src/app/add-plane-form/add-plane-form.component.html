@@ -2,14 +2,14 @@
   
   <mat-dialog-content>
 
-  <mat-tab-group backgroundColor="primary" color="accent" [dynamicHeight]="true">
+  <mat-tab-group backgroundColor="primary" color="accent">
     <mat-tab label="Flugzeug Informationen">
       <form [formGroup]="allgemeinFlugzInfo">
         <div class="tab-content">
 
           <mat-form-field class="input-width">
             <input type="text" matInput [ngModel]="id" placeholder="Kennung" minlength="6" 
-            pattern="[A-Z[1]'-'[1]A-Z[4ö]]+" ng-pattern-restrict [formControl]="idFormControl" required>
+            pattern="[A-Z]{1}-{1}[A-Z]{4}" ng-pattern-restrict [formControl]="idFormControl" required>
             <mat-error *ngIf="idFormControl.hasError('required')">
               Die Kennung ist <strong>erforderlich</strong>
             </mat-error>
