@@ -10,20 +10,19 @@ import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MemberListModule } from './member-list/member-list.module';
 import { MemberViewModule } from './member-view/member-view.module';
-import { MAT_DATE_LOCALE } from '@angular/material';
-import { AddPlaneFormComponent } from './add-plane-form/add-plane-form.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     MemberListModule,
-    MemberViewModule
+    MemberViewModule,
+    PlaneListModule
   ],
   entryComponents: [
     AddUserFormComponent,
