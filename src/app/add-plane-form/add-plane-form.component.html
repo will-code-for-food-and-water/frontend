@@ -1,0 +1,63 @@
+<div class="dialog-wrapper">
+  
+  <mat-dialog-content>
+
+  <mat-tab-group backgroundColor="primary" color="accent" [dynamicHeight]="true">
+    <mat-tab label="Flugzeug Informationen">
+      <form [formGroup]="allgemeinFlugzInfo">
+        <div class="tab-content">
+
+          <mat-form-field class="input-width">
+            <input type="text" matInput [ngModel]="id" placeholder="Kennung" minlength="6" 
+            pattern="[A-Z[1]'-'[1]A-Z[4ö]]+" ng-pattern-restrict [formControl]="idFormControl" required>
+            <mat-error *ngIf="idFormControl.hasError('required')">
+              Die Kennung ist <strong>erforderlich</strong>
+            </mat-error>
+            <mat-error *ngIf="idFormControl.hasError('minlength')">
+              Die Kennung muss mindestens 6 Zeichen lang sein
+            </mat-error>
+            <mat-error *ngIf="idFormControl.hasError('pattern')">
+              Bitte eine gültige Kennung eingeben
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input-width">
+            <input type="text" matInput [ngModel]="name" placeholder="Name" minlength="5"
+            pattern="[a-zA-Z_äÄöÖüÜß_'-']+" ng-pattern-restrict [formControl]="nameFormControl" required>
+            <mat-error *ngIf="nameFormControl.hasError('required')">
+              Der Name ist <strong>erforderlich</strong>
+            </mat-error>
+            <mat-error *ngIf="nameFormControl.hasError('minlength')">
+              Der Name muss mindestens 5 Zeichen lang sein
+            </mat-error>
+           </mat-form-field>
+                        
+          <mat-form-field class="input-width">
+            <mat-select placeholder="Lizenz" [ngModel]="licence" [formControl]="licenceFormControl" required>
+              <mat-option *ngFor="let licence of licence" [value]="licence">{{licence}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="licenceFormControl.hasError('required')">
+              Die Lizenz ist <strong>erforderlich</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="input-width">
+            <mat-select placeholder="Abstellort" [ngModel]="location" id="location" [formControl]="locationFormControl" required>
+              <mat-option *ngFor="let location of location" [value]="location">{{location}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="locationFormControl.hasError('required')">
+              Der Abstellort ist <strong>erforderlich</strong>
+            </mat-error>
+          </mat-form-field>
+          
+          </div>
+        </form>
+      </mat-tab>
+    </mat-tab-group>    
+  </mat-dialog-content>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Abbrechen</button>
+    <button mat-raised-button (click)="savePlaneData()" color="primary">Speichern</button>
+  </div>
+</div>
