@@ -5,17 +5,20 @@
 
 .mat-dialog-content {
     padding: 0 0;
-}
+   }
 
 .tab-content {
     padding: 24px 24px;
-}
+    display: block !important;
+    flex-grow: inherit;
+    flex-shrink: inherit;
+    }
 
 .input-width {
-    min-width: 150px;
-    max-width: 500px;
     width: 100%;
     display: block;
+    flex-grow: inherit;
+    flex-shrink: inherit;
 }
 
 .authorization-title {
