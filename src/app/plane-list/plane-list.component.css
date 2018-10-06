@@ -11,4 +11,9 @@
     transform: translateY(-4px);
   }
 
+  .tool {
+    margin: 8px;
+    float: right;
+  }
+
 
