@@ -1,10 +1,8 @@
 <div class="dialog-wrapper">
-  
+  <h2 mat-dialog-title>Flugzeug hinzufügen</h2>
   <mat-dialog-content>
 
-  <mat-tab-group backgroundColor="primary" color="accent">
-    <mat-tab label="Flugzeug Informationen">
-      <form [formGroup]="allgemeinFlugzInfo">
+       <form [formGroup]="allgemeinFlugzInfo">
         <div class="tab-content">
 
           <mat-form-field class="input-width">
@@ -22,15 +20,15 @@
           </mat-form-field>
 
           <mat-form-field class="input-width">
-            <input type="text" matInput [ngModel]="name" placeholder="Name" minlength="5"
-            pattern="[a-zA-Z_äÄöÖüÜß_'-']+" ng-pattern-restrict [formControl]="nameFormControl" required>
+            <input type="text" matInput [ngModel]="name" placeholder="Name" minlength="5" maxlength = "25"
+            pattern="[a-zA-Z_äÄöÖüÜß0-9/. \-]+" ng-pattern-restrict [formControl]="nameFormControl" required>
             <mat-error *ngIf="nameFormControl.hasError('required')">
               Der Name ist <strong>erforderlich</strong>
             </mat-error>
             <mat-error *ngIf="nameFormControl.hasError('minlength')">
               Der Name muss mindestens 5 Zeichen lang sein
             </mat-error>
-           </mat-form-field>
+          </mat-form-field>
                         
           <mat-form-field class="input-width">
             <mat-select placeholder="Lizenz" [ngModel]="licence" [formControl]="licenceFormControl" required>
@@ -52,12 +50,11 @@
           
           </div>
         </form>
-      </mat-tab>
-    </mat-tab-group>    
+      
   </mat-dialog-content>
 
   <div mat-dialog-actions>
-    <button mat-button (click)="onNoClick()">Abbrechen</button>
+    <button mat-button mat-dialog-close>Abbrechen</button>
     <button mat-raised-button (click)="savePlaneData()" color="primary">Speichern</button>
   </div>
 </div>
