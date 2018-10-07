@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaneListService } from './../services/planelist.service';
 import { Plane, neededAuthorizationEnum } from './../models/plane.model';
-import { MatIconModule } from '@angular/material/icon';
+import { AddPlaneFormComponent } from '../add-plane-form/add-plane-form.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-plane-list',
