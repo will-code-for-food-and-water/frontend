@@ -6,16 +6,13 @@
         <div class="tab-content">
 
           <mat-form-field class="input-width">
-            <input type="text" matInput [ngModel]="id" placeholder="Kennung" minlength="6" 
+            <input type="text" matInput [ngModel]="id" placeholder="Kennung" 
             pattern="[A-Z]{1}-{1}[A-Z]{4}" ng-pattern-restrict [formControl]="idFormControl" required>
             <mat-error *ngIf="idFormControl.hasError('required')">
               Die Kennung ist <strong>erforderlich</strong>
             </mat-error>
-            <mat-error *ngIf="idFormControl.hasError('minlength')">
-              Die Kennung muss mindestens 6 Zeichen lang sein
-            </mat-error>
             <mat-error *ngIf="idFormControl.hasError('pattern')">
-              Bitte eine gültige Kennung eingeben
+              Bitte eine gültige Kennung eingeben (z.B. D-ERFI)
             </mat-error>
           </mat-form-field>
 
