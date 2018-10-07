@@ -4,9 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MemberListComponent } from './member-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatTableModule, MatSortModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatTableModule, MatSortModule } from '@angular/material';
 import { MemberListService } from './../services/memberlist.service';
-import { AddUserFormModule } from './../add-user-form/add-user-form.module';
 
 @NgModule({
   imports: [
@@ -14,10 +13,7 @@ import { AddUserFormModule } from './../add-user-form/add-user-form.module';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatSortModule,
-    MatButtonModule,
-    MatIconModule,
-    AddUserFormModule
+    MatSortModule
   ],
   declarations: [
     MemberListComponent

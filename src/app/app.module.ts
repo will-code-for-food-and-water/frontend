@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MAT_DATE_LOCALE } from '@angular/material';
 import { AppComponent } from './app.component';
-import { AddUserFormComponent } from './add-user-form/add-user-form.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { MemberListModule } from './member-list/member-list.module';
@@ -25,7 +24,6 @@ import { AddPlaneFormModule } from './add-plane-form/add-plane-form.module';
     AddPlaneFormModule
   ],
   entryComponents: [
-    AddUserFormComponent,
     AddPlaneFormComponent,
     EditMemberDialogComponent
   ],
