@@ -6,12 +6,12 @@
         <div class="tab-content">
 
           <mat-form-field class="input-width">
-            <input type="text" matInput [ngModel]="id" placeholder="Kennung" 
-            pattern="[A-Z]{1}-{1}[A-Z]{4}" ng-pattern-restrict [formControl]="idFormControl" required>
-            <mat-error *ngIf="idFormControl.hasError('required')">
+            <input type="text" matInput [ngModel]="number" placeholder="Kennung" 
+            pattern="[A-Z]{1}-{1}[A-Z]{4}" ng-pattern-restrict [formControl]="numberFormControl" required>
+            <mat-error *ngIf="numberFormControl.hasError('required')">
               Die Kennung ist <strong>erforderlich</strong>
             </mat-error>
-            <mat-error *ngIf="idFormControl.hasError('pattern')">
+            <mat-error *ngIf="numberFormControl.hasError('pattern')">
               Bitte eine gültige Kennung eingeben (z.B. D-ERFI)
             </mat-error>
           </mat-form-field>
@@ -28,19 +28,19 @@
           </mat-form-field>
                         
           <mat-form-field class="input-width">
-            <mat-select placeholder="Lizenz" [ngModel]="licence" [formControl]="licenceFormControl" required>
-              <mat-option *ngFor="let licence of licence" [value]="licence">{{licence}}</mat-option>
+            <mat-select placeholder="Lizenz" [ngModel]="neededAuthorization" [formControl]="neededAuthorizationFormControl" required>
+              <mat-option *ngFor="let neededAuthorization of neededAuthorization" [value]="neededAuthorization">{{neededAuthorization}}</mat-option>
             </mat-select>
-            <mat-error *ngIf="licenceFormControl.hasError('required')">
+            <mat-error *ngIf="neededAuthorizationFormControl.hasError('required')">
               Die Lizenz ist <strong>erforderlich</strong>
             </mat-error>
           </mat-form-field>
 
           <mat-form-field class="input-width">
-            <mat-select placeholder="Abstellort" [ngModel]="location" id="location" [formControl]="locationFormControl" required>
-              <mat-option *ngFor="let location of location" [value]="location">{{location}}</mat-option>
+            <mat-select placeholder="Abstellort" [ngModel]="position" id="position" [formControl]="positionFormControl" required>
+              <mat-option *ngFor="let position of position" [value]="position">{{position}}</mat-option>
             </mat-select>
-            <mat-error *ngIf="locationFormControl.hasError('required')">
+            <mat-error *ngIf="positionFormControl.hasError('required')">
               Der Abstellort ist <strong>erforderlich</strong>
             </mat-error>
           </mat-form-field>

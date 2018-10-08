@@ -20,21 +20,21 @@ export class AddPlaneFormComponent implements OnInit {
   allgemeinFlugzInfo: FormGroup;
 
 
-  id = '';
+  number = '';
   name = '';
-  licence = ['PPL-A', 'PPL-e', 'eZF-I', 'eZF-II', 'Lehrbefugnis'];
-  location = ['Halle1', 'Halle2'];
+  neededAuthorization = ['PPL-A', 'PPL-e', 'eZF-I', 'eZF-II', 'Lehrbefugnis'];
+  position = ['Halle1', 'Halle2'];
 
-  idFormControl = new FormControl('', [
+  numberFormControl = new FormControl('', [
     Validators.required,
   ]);
   nameFormControl = new FormControl('', [
     Validators.required,
   ]);
-  licenceFormControl = new FormControl('', [
+  neededAuthorizationFormControl = new FormControl('', [
     Validators.required,
   ]);
-  locationFormControl = new FormControl('', [
+  positionFormControl = new FormControl('', [
     Validators.required,
   ]);
   matcher = new MyErrorStateMatcher();
