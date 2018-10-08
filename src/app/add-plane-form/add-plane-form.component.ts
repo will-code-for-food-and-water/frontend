@@ -43,6 +43,10 @@ export class AddPlaneFormComponent implements OnInit {
 
   onSubmit() { this.submitted = true; }
 
+    onFileChanged(event) {
+      const file = event.target.files[0];
+    }
+
   constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit() {

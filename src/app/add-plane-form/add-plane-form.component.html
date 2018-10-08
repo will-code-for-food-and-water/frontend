@@ -4,6 +4,7 @@
 
        <form [formGroup]="allgemeinFlugzInfo">
         <div class="tab-content">
+          <div id="plane-header">Flugzeugdaten</div>
 
           <mat-form-field class="input-width">
             <input type="text" matInput [ngModel]="number" placeholder="Kennung" 
@@ -44,6 +45,14 @@
               Der Abstellort ist <strong>erforderlich</strong>
             </mat-error>
           </mat-form-field>
+
+           <input 
+          style="display: none" 
+          type="file" (change)="onFileChanged($event)" 
+          #fileInput>
+          <div id="upload-header">Bild hochladen</div>
+          <button (click)="fileInput.click()">Durchsuchen</button>
+        
           
           </div>
         </form>

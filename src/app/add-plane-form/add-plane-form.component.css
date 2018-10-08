@@ -29,3 +29,12 @@
 .add-button {
     margin-top: 10px;
 }
+#plane-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+   }
+#upload-header {
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 20px;
+   }
