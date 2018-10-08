@@ -8,7 +8,7 @@ export class PlaneListService {
 
   constructor(public httpClient: HttpClient) { }
 
-  public getPlaneListData(): Observable<Plane[]>  {
-    return this.httpClient.get<Plane[]>('http://localhost:4200/assets/mock-data/plane.json');
+  public getPlaneListData(id): Observable<Plane>  {
+    return this.httpClient.get<Plane>('http://localhost:4200/assets/mock-data/plane.json');
   }
 }
