@@ -22,7 +22,7 @@ export class AddPlaneFormComponent implements OnInit {
 
   number = '';
   name = '';
-  neededAuthorization = ['PPL-A', 'PPL-e', 'eZF-I', 'eZF-II', 'Lehrbefugnis'];
+  neededAuthorization = ['PPL-A', 'PPL-e', 'eZF-I', 'eZF-II'];
   position = ['Halle1', 'Halle2'];
 
   numberFormControl = new FormControl('', [
